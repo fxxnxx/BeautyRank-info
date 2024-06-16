@@ -19,7 +19,7 @@ export default function article() {
           </span>
         </div>
         <img className="phone2" src={phone2} alt="phone2" />
-          <img className="heart2" src={heart2} alt="heart" />
+          <img className="heart2 mobile" src={heart2} alt="heart" />
       </article>
     </>
   );

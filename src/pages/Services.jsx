@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Servises from "../components/MainServises";
+import Main from "../components/MainServises";
+import WalpapperBottom from "../ui/WalpapperImg";
 
 const Services = () => {
   return (
     <>
       <Header />
-      <Servises />
+      <Main />
+      <WalpapperBottom />
       <Footer />
     </>
   );
