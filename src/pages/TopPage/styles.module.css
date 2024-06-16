@@ -1,4 +1,20 @@
 .mainPageWrapper {
-    height: 100px;
-    width: 100px;
+    height: calc(100vh - 160px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pageTitle {
+    font-size: 32px;
+    color: #959595;
+    padding: 80px 0 44px 0;
+}
+
+.textInfo {
+
+}
+
+.masterInput {
+
 }
