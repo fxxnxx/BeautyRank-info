@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import TopTable from '../../components/TopTable';
-
+import search from '../../assets/img/search.svg';
+import LayerBottom from '../../assets/img/LayerBottom.svg';
 import styles from './styles.module.css';
+import Layer1 from '../../assets/img/Layer1.svg';
+import Layer2 from '../../assets/img/Layer2.svg';
+import Loader from '../../components/Loader';
+
 
 const TopPage = () => {
-  const [top, setTop] = useState([]);
+  const [tableData, setTableData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const formTop = (data) => {
+  const tableDataForm = (data) => {
     const users = new Map();
     data.forEach((item) => {
       item.categories.forEach((category) => {
@@ -27,33 +32,49 @@ const TopPage = () => {
       })
     })
 
-    return Array.from(users.values());
+    return Array.from(users.values()).sort((a,b) => b.score - a.score);
   }
 
-  useEffect(() => {
+  const getTableData = () => {
     fetch('https://beautyrank.ru/api/v1/event/top_100/')
       .then((response) => response.json())
       .then((data) => {
         console.log('data: ', data);
-        setTop(formTop(data));
+        setTableData(tableDataForm(data));
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err.message);
-      });
+      })
+  };
+
+  useEffect(() => {
+    getTableData();
   }, []);
 
   return (
     <>
       <Header />
       <div className={styles.mainPageWrapper}>
-        <div className="">
+        <div className={styles.mainPageContainer}>
         <h1 className={styles.pageTitle}>Таблица рейтинга мастеров</h1>
         <h3 className={styles.textInfo}>топ 100</h3>
-        <input className={styles.masterInput} type="Введите имя мастера" />
-        <TopTable users={top} />
+        <form className={styles.masterInputWrapper}>
+          <input className={styles.masterInput} type="text" placeholder="Введите имя мастера" name="name" />
+          <img className={styles.searchIcon} src={search} alt="search" />
+        </form>
+        {isLoading ? <Loader /> :<TopTable tableData={tableData} />}
+        </div>
+        <img className={styles.leftBackgroundComet} src={Layer1} alt="Layer1" />
+        <img className={styles.rightBackgroundComet} src={Layer2} alt="Layer2" />
+        <div className={styles.footerBackgroundWrapper}>
+          <img
+            className={styles.footerBackground}
+            src={LayerBottom}
+            alt="Layer_bottom"
+          />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

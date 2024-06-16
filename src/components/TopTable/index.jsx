@@ -1,35 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import UserCard from '../UserCard';
+
 import styles from './styles.module.css';
 
-export default function TopTable({ users }) {
-  useEffect(() => {
-    console.log('[TopTable] users: ', users);
-  }, [users]);
+const TopTable = ({ tableData }) => (
+  <div className={styles.topTable}>
+    <div className={styles.cardMargin} />
+    <table>
+      <tbody>
+        {tableData.map((user, rank) => <UserCard user={user} rank={rank} />)}
+      </tbody>
+    </table>
+  </div>
+);
 
-  return (
-    <div className={styles.topTable}>
-      <table>
-        <thead>
-        <tr>
-          <th>User ID | </th>
-          <th>User Avatar | </th>
-          <th>User Name | </th>
-          <th>Score</th>
-        </tr>
-        </thead>
-        <tbody>
-        {users.map((user) => (
-          <tr key={user.user_id}>
-            <td>{user.user_id}</td>
-            <td>
-              <img src={user.user_avatar} alt={user.user_name} />
-            </td>
-            <td>{user.user_name}</td>
-            <td>{user.score}</td>
-          </tr>
-        ))}
-        </tbody>
-      </table>
-    </div>
-  )
-};
+export default TopTable;

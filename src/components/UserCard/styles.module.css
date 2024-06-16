@@ -1,0 +1,59 @@
+.userCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 77px;
+  width: 535px;
+  height: 63px;
+  border-radius: 5px;
+  margin-bottom: 6px;
+}
+
+.userRank  {
+  width: 50px;
+}
+
+.userRank span {
+  color: #FF3E9B;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.cardMargin {
+  margin-bottom: 6px;
+  width: 534px;
+  background-color: #959595;
+  height: 1px;
+  margin-left: 2px;
+}
+
+.userInfoWrapper {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.userName {
+  font-size: 12px;
+  font-weight: 700;
+  color: #494949;
+}
+
+.userScore {
+  font-size: 20px;
+  font-weight: 700;
+  color: #494949;
+}
+
+.userAvatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.userAvatar img {
+  width: 100%;
+  border-radius: 50%;
+}
