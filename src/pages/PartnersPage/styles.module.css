@@ -1,0 +1,77 @@
+.mainPageWrapper {
+  height: calc(100vh - 160px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  background-image: linear-gradient(#494949, #494949,  #0D0D0D);
+  position: fixed;
+}
+
+.footerBackgroundWrapper {
+  position: absolute;
+  width: 100%;
+  height: 16%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.footerBackground {
+  width: 100%;
+}
+
+.leftBackgroundComet {
+  position: absolute;
+  z-index: -1;
+  left : -92px;
+  animation: leftBackgroundComet 6s ease-in-out infinite;
+  top: -328px;
+}
+
+.rightBackgroundComet {
+  position: absolute;
+  z-index: -1;
+  right: -60px;
+  top: 520px;
+  width: 140px;
+  animation: rightBackgroundComet 6s ease-in-out infinite;
+}
+
+.searchIcon {
+  cursor: pointer;
+}
+
+@keyframes leftBackgroundComet {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes rightBackgroundComet {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.partnersPageFooter {
+  position: fixed;
+  bottom: 0;
+  background-color: #494949;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLogo {
+  width: 20%;
+}
