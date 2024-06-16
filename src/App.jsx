@@ -1,20 +1,21 @@
-import React from "react";
-import "./styles/index.css";
-import { Routes, Route } from "react-router-dom";
-import { Aboutpage } from "./pages/Aboutpage.jsx";
-import { Homepage } from "./pages/Homepage.jsx";
-import { Partnerspage } from "./pages/Partnerspage.jsx";
-import { Services } from "./pages/Services.jsx";
-import { Toppage } from "./pages/Toppage.jsx";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import PartnersPage from './pages/PartnersPage';
+import ServicePage from './pages/ServicePage';
+import TopPage from './pages/TopPage';
+
+import './styles/index.css';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/about" element={<Aboutpage />} />
-      <Route path="/partners" element={<Partnerspage />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/top100" element={<Toppage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/partners" element={<PartnersPage />} />
+      <Route path="/services" element={<ServicePage />} />
+      <Route path="/top100" element={<TopPage />} />
       <Route path="*" element={<>404</>} />
     </Routes>
   );
