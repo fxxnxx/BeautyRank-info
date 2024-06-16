@@ -3,11 +3,11 @@ import Header from '../../components/Header';
 import TopTable from '../../components/TopTable';
 import search from '../../assets/img/search.svg';
 import LayerBottom from '../../assets/img/LayerBottom.svg';
-import styles from './styles.module.css';
 import Layer1 from '../../assets/img/Layer1.svg';
 import Layer2 from '../../assets/img/Layer2.svg';
 import Loader from '../../components/Loader';
 
+import styles from './styles.module.css';
 
 const TopPage = () => {
   const [tableData, setTableData] = useState([]);

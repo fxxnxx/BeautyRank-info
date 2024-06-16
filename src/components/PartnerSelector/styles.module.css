@@ -1,0 +1,28 @@
+.cardWrapper {
+  width: 836px;
+  height: 478px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-left: 70px;
+}
+
+.partnerCard {
+  border-radius: 10px;
+}
+
+.switchBtn {
+  width: 50px;
+  cursor: pointer;
+}
+
+.switchBtnWrapper {
+  display: flex;
+  justify-content: center;
+  height: 380px;
+}
+
+.mainPageContainer {
+  display: flex;
+  flex-direction: column;
+}
