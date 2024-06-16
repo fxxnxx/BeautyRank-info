@@ -1,0 +1,36 @@
+.topTable {
+  width: 589px;
+  height: 590px;
+  overflow-y: scroll;
+  margin-left: 42px;
+}
+
+/* Кастомный скролл */
+/* width */
+.topTable::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.topTable::-webkit-scrollbar-track {
+  background: #D0D0D0;
+}
+
+/* Handle */
+.topTable::-webkit-scrollbar-thumb {
+  background: #FF3E9B;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.topTable::-webkit-scrollbar-thumb:hover {
+  background: #FF3E9B;
+}
+
+.cardMargin {
+  margin-bottom: 6px;
+  width: 534px;
+  background-color: #959595;
+  height: 1px;
+  margin-left: 2px;
+}

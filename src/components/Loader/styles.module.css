@@ -1,0 +1,14 @@
+.loaderWrapper { 
+  width: 537px;
+  height: 590px;
+  display: flex;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loaderWrapper > img {
+  width: 280px;
+  height: 220px;
+}
