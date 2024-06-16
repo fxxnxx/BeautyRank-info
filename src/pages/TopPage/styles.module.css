@@ -44,14 +44,18 @@
 }
 
 .pageTitle {
+  font-family: SFProDisplay-Heavy;
   font-size: 32px;
+  font-weight: bold;
   color: #959595;
   text-align: center;
   padding: 40px 0 44px 0;
 }
 
 .textInfo {
+  font-family: SFProDisplay-Heavy;
   font-size: 26px;
+  font-weight: bold;
   color: #282828;
   text-align: center;
   padding-bottom: 39px;
@@ -90,6 +94,24 @@
   cursor: pointer;
 }
 
+.footerButton {
+  display: none;
+  width: 186px;
+  height: 46px;
+  color: #ff3e9b;
+  background: #494949;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 50px;
+  border: 1px solid #ff3e9b;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 25px 0;
+}
+
 @keyframes leftBackgroundComet {
   0%,
   100% {
@@ -107,5 +129,30 @@
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .leftBackgroundComet, .rightBackgroundComet, .footerBackgroundWrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .footerButton {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pageTitle {
+    font-size: 16px;
+    padding: 26px 0 32px 0;
+  }
+
+  .textInfo {
+    font-family: SFProDisplay-Heavy;
+    font-size: 24px;
+    padding-bottom: 30px;
   }
 }

@@ -8,7 +8,7 @@ const TopTable = ({ tableData }) => (
     <div className={styles.cardMargin} />
     <table>
       <tbody>
-        {tableData.map((user, rank) => <UserCard user={user} rank={rank} />)}
+        {tableData.map((user) => <UserCard user={user} rank={user.rank} />)}
       </tbody>
     </table>
   </div>

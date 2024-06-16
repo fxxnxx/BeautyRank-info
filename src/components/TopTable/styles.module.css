@@ -34,3 +34,16 @@
   height: 1px;
   margin-left: 2px;
 }
+
+@media screen and (max-width: 640px) {
+  .topTable {
+    width: auto;
+    max-height: calc(100vh - 360px);
+    overflow-y: scroll;
+    margin-left: 10px;
+  }
+
+  .cardMargin {
+    width: 362px;
+  }
+}
