@@ -26,6 +26,7 @@ const PartnersPage = () => {
       </div>
       <footer className={styles.partnersPageFooter}>
         <img className={styles.footerLogo} src={FooterLogo} alt="" />
+        <button class={styles.contactUsBtn}>Связаться с нами</button>
       </footer>
     </>
   );

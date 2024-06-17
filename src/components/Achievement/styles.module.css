@@ -46,3 +46,14 @@
     font-size: 14px;
     font-weight: 900;
 }
+
+@media screen and (max-width: 640px) {
+    .cardMargin {
+        width: 388px;
+    }
+    
+    .achievementWrapper {
+        height: 61px!important;
+    }
+}
+  

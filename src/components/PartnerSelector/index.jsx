@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import switchBtn from '../../assets/img/switchBtn.svg';
+import backIcon from '../../assets/img/backIcon.svg';
 import { PartnerCard } from '../PartnerCard';
 import { PartnerTable } from '../PartnerTable';
 
@@ -17,11 +18,16 @@ const PartnerSelector = () => {
       <div className={styles.cardWrapper}>
       {
         activePartner ? (
-          <div className={styles.singleCardWrapper} style={{ margin: '70px 0 -70px 0' }}>
-            <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={activePartner} />
-            <span className={styles.partnerName} >{activePartner === 1 ? 'Игорь Колорадо' : 'Мария Волохова'}</span>
-            <PartnerTable />
-          </div>
+          <>
+            <div className={styles.backIcon} onClick={() => setActiveCard(false)}>
+              <img src={backIcon} alt="backIcon"/>
+            </div>
+            <div className={styles.singleCardWrapper} style={{ margin: '70px 0 -70px 0' }}>
+              <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={activePartner} />
+              <span className={styles.partnerName} >{activePartner === 1 ? 'Игорь Колорадо' : 'Мария Волохова'}</span>
+              <PartnerTable />
+            </div>
+          </>
         ) : (
           <>
             <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={1} />
@@ -30,7 +36,7 @@ const PartnerSelector = () => {
               <img
                 className={styles.switchBtn}
                 src={switchBtn}
-                alt="Layer_bottom"
+                alt="switchBtn"
               />
             </div>
           </>
