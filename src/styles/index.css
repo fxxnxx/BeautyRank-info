@@ -35,32 +35,55 @@
   color: #ff3e9b;
 }
 
+.background {
+  position: absolute;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
 .walpapper {
   position: absolute;
   z-index: -1;
   float: left;
 }
 
-.walpapper1 {
+.walpapperLB {
   left: 0;
-  bottom: -100px;
-  width: 600px;
+  bottom: 0;
 }
 
-.walpapper2 {
+.walpapperR {
   right: 0;
-  width: 200px;
 }
 
-.walpapper3 {
+.walpapperLT {
   left: 0;
-  top: -50px;
-  height: 200px;
+  top: 0;
 }
 
-.walpapper4 {
+.walpapperRB {
   right: 0;
-  height: 350px;
+  bottom: 0;
+}
+
+.walpapperRT {
+  right: 0;
+  top: 0;
+}
+
+.walpapperRL {
+  left: 0;
+  right: 0;
+}
+
+.walpapperL {
+  left: 0;
 }
 
 .walpapper_bottom {
@@ -74,6 +97,16 @@
 .walpapper_bottom_div {
   position: relative;
   width: 100%;
+}
+
+.heartDouble {
+  position: absolute;
+  z-index: 5;
+  bottom: -150px;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 389px;
+  height: 323px;
 }
 
 * {
@@ -269,18 +302,20 @@ main {
   z-index: 1;
 }
 
-.left_img {
-  width: 50%;
+.main_top > .homePhone {
   padding: 0px 60px;
   z-index: 1;
+  height: 100%;
+  width: 45%;
 }
 
 .left_text {
-  width: 60%;
+  width: 55%;
   font-size: 32px;
   display: flex;
   flex-direction: column;
   z-index: 1;
+  position: relative;
 }
 
 .air {
@@ -308,7 +343,7 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/img/article.svg);
+  background-image: url(../assets/img/article.png);
   z-index: 1;
 }
 
@@ -321,6 +356,7 @@ article {
 .section_img > img {
   margin: 0px 23px;
   z-index: 1;
+  width: 400px;
 }
 
 .section {
@@ -357,7 +393,7 @@ article {
 .menu__content {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/img/Menu.svg");
+  background-image: url("../assets/img/Menu.png");
   flex-direction: column;
   transition: all 0.4s;
   font-size: 20px;
@@ -388,8 +424,39 @@ ul li a {
   z-index: 1;
 }
 
-.main_bottom_mobile {
-  display: none;
+.round-button {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.left_text_flexblock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_text.about_text {
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+.image {
+  transition: width 0.3s ease-in-out;
 }
 
 @keyframes float1 {
@@ -422,12 +489,6 @@ ul li a {
     font-size: 25px;
   }
 
-  .left_img {
-  width: 50%;
-  padding: 0px 50px;
-  z-index: 1;
-}
-
   .main_right {
     width: 718px;
     height: 718px;
@@ -436,6 +497,10 @@ ul li a {
   .main_top {
     height: 498px;
     font-size: 25px;
+  }
+
+  .main_top > .homePhone {
+    padding: 0 50px;
   }
 
   .main_bottom {
@@ -470,12 +535,6 @@ ul li a {
     height: 570px;
   }
 
-  .left_img {
-  width: 50%;
-  padding: 0px 40px;
-  z-index: 1;
-}
-
   .left_text {
     font-size: 17px;
   }
@@ -483,6 +542,10 @@ ul li a {
   .main_right {
     width: 570px;
     height: 570px;
+  }
+
+  .main_top > .homePhone {
+    padding: 0 40px;
   }
 
   .main_top {
@@ -519,12 +582,6 @@ ul li a {
     height: 456px;
   }
 
-  .left_img {
-  width: 50%;
-  padding: 0px 30px;
-  z-index: 1;
-}
-
   .left_text {
     font-size: 14px;
   }
@@ -538,9 +595,18 @@ ul li a {
     height: 315px;
   }
 
+  .main_top > .homePhone {
+    padding: 0 20px;
+  }
+
   .main_bottom {
     height: 128px;
     font-size: 14px;
+  }
+
+  .section_img > img {
+    z-index: 1;
+    width: 325px;
   }
 
   .walpapper {
@@ -563,6 +629,170 @@ ul li a {
 }
 
 @media screen and (max-width: 768px) {
+  .main_right {
+    display: none;
+  }
+
+  .main_left {
+    width: 100%;
+    height: auto;
+  }
+
+  .main_top {
+    background-image: none;
+    height: 427px;
+    position: relative;
+    margin-top: 90px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .main_bottom {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 180px;
+    z-index: 10;
+    font-size: 3vw;
+    backdrop-filter: blur(5px);
+  }
+
+  .background_block {
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .background_block::before {
+    opacity: 1;
+  }
+
+  .main_top > .homePhone {
+    height: 406px;
+    width: 214px;
+    right: 100px;
+    padding: 0;
+  }
+
+  .aboutPhone {
+    position: absolute;
+    left: 0;
+    margin: 0 40px;
+    height: 713px;
+    width: 357px;
+  }
+
+  .left_text {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    background-image: url("../assets/img/phone_text.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 273px;
+    padding: 0 17px;
+    border-radius: 6px;
+    z-index: 1;
+    height: 50%;
+    position: relative;
+    top: 0;
+  }
+
+  .card {
+    width: 350px;
+    height: 500px;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 145px;
+    z-index: 1;
+  }
+
+  .card1 {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .card2 {
+    left: 100%;
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  .card.exit-left {
+    left: -100%;
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  .card.enter-right {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .card.exit-right {
+    left: 100%;
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  .card.enter-left {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .full_card > button {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    border: 0;
+    border-radius: 100px;
+    padding: 0;
+    background: none;
+    cursor: "pointer";
+    outline: none;
+  }
+
+  .section_text {
+    font-size: 36px;
+    width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    padding-top: 70px;
+    padding-bottom: 29px;
+    z-index: 1;
+  }
+
+  .section_img > img {
+    z-index: 1;
+    margin: 0px;
+  }
+
+  .section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 170px;
+    height: 772px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
   .mobile {
     display: flex;
   }
@@ -588,27 +818,12 @@ ul li a {
     position: relative;
   }
 
-  .left_text {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 1;
-    background-image: url("../assets/img/phone_text.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 273px;
-    margin-top: 23px;
-    padding: 17px;
-    z-index: 1;
-  }
-
   .heart {
     position: absolute;
     z-index: 5;
-    bottom: 0;
-    right: 0;
+    bottom: -105px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .heart2 {
@@ -624,27 +839,41 @@ ul li a {
     align-items: center;
   }
 
-  .main_bottom_mobile {
-    background-image: url("../assets/img/main_bottom.svg");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: 91px;
-    font-size: 3.4vw;
-    z-index: 1;
-    position: relative;
-  }
-
   .article_block {
-    font-size: 15px;
+    font-size: 20px;
     width: 730px;
     height: 277px;
     padding: 17px;
   }
 
   .air {
-  height: 40vh;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .article_block {
+    font-size: 13px;
+  }
+
+  .main_bottom {
+    font-size: 13px;
+    height: 64px;
+  }
+
+  .left_text {
+    font-size: 15px;
+  }
+
+  .heart {
+    width: 140px;
+  }
+
+  .heart2 {
+    width: 220px;
+  }
+
+  .phone2 {
+    width: 200px;
   }
 }

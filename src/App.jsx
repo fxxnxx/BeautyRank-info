@@ -1,12 +1,12 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import PartnersPage from './pages/PartnersPage';
-import ServicePage from './pages/ServicePage';
-import TopPage from './pages/TopPage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PartnersPage from "./pages/PartnersPage";
+import ServicePage from "./pages/ServicePage";
+import TopPage from "./pages/TopPage";
 
-import './styles/index.css';
+import "./styles/index.css";
 
 function App() {
   return (
