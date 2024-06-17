@@ -1,36 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import switchBtn from '../../assets/img/switchBtn.svg';
-import colorado from '../../assets/png/Colorado.png';
-import volohova from '../../assets/png/Volohova.png';
+import { PartnerCard } from '../PartnerCard';
+import { PartnerTable } from '../PartnerTable';
 
 import styles from './styles.module.css';
 
 const PartnerSelector = () => {
+  const [activePartner, setActivePartner] = useState(false);
+  const setActiveCard = (value) => {
+    setActivePartner(value)
+  };
+
   return (
     <div className={styles.mainPageContainer}>
-      <h1 className={styles.pageTitle}>Наши партнеры</h1>
+      {!activePartner && <h1 className={styles.pageTitle}>Наши партнеры</h1>}
       <div className={styles.cardWrapper}>
-        <div className={styles.partnerCard}>
-          <img
-            className={styles.profileImg}
-            src={colorado}
-            alt="colorado"
-          />
-        </div>
-        <div className={styles.partnerCard}>
-          <img
-            className={styles.profileImg}
-            src={volohova}
-            alt="volohova"
-          />
-        </div>
-        <div className={styles.switchBtnWrapper}>
-          <img
-            className={styles.switchBtn}
-            src={switchBtn}
-            alt="Layer_bottom"
-          />
-        </div>
+      {
+        activePartner ? (
+          <div className={styles.singleCardWrapper} style={{ margin: '70px 0 -70px 0' }}>
+            <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={activePartner} />
+            <span className={styles.partnerName} >{activePartner === 1 ? 'Игорь Колорадо' : 'Мария Волохова'}</span>
+            <PartnerTable />
+          </div>
+        ) : (
+          <>
+            <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={1} />
+            <PartnerCard activePartner={activePartner} setActiveCard={setActiveCard} number={2} />
+            <div className={styles.switchBtnWrapper}>
+              <img
+                className={styles.switchBtn}
+                src={switchBtn}
+                alt="Layer_bottom"
+              />
+            </div>
+          </>
+        )
+      }
       </div>
     </div>
   )
