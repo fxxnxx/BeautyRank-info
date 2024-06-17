@@ -23,7 +23,7 @@ export default function About() {
       <img className="walpapper walpapperR pc" src={BackAboutRight} alt="img" />
       <img className="walpapper mobile" src={BackAboutMob2} alt="img" />
 
-      <main style={{ marginTop: "91px" }}>
+      <div style={{ marginTop: "91px" }}>
         <div
           style={{
             display: "flex",
@@ -80,7 +80,7 @@ export default function About() {
             </span>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }

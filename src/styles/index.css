@@ -99,16 +99,6 @@
   width: 100%;
 }
 
-.heartDouble {
-  position: absolute;
-  z-index: 5;
-  bottom: -150px;
-  left: 75%;
-  transform: translateX(-50%);
-  width: 389px;
-  height: 323px;
-}
-
 * {
   margin: 0;
   padding: 0;
