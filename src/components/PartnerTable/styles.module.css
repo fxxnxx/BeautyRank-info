@@ -1,0 +1,27 @@
+.partnerTable {
+  width: 437px;
+  height: 233px;
+  overflow-y: scroll;
+}
+
+/* Кастомный скролл */
+/* width */
+.partnerTable::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.partnerTable::-webkit-scrollbar-track {
+  background: #D0D0D0;
+}
+
+/* Handle */
+.partnerTable::-webkit-scrollbar-thumb {
+  background: #FF3E9B;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+.partnerTable::-webkit-scrollbar-thumb:hover {
+  background: #FF3E9B;
+}
