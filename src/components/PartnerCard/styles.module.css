@@ -1,0 +1,12 @@
+.partnerCard {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .partnerCard > img {
+    width: 200px;
+    height: 234px;
+  }
+}
+  
