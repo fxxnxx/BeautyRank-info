@@ -1,6 +1,6 @@
 import React from "react";
-import phone2 from "../assets/img/phone2.svg";
-import heart2 from "../assets/img/heart2.svg"
+import phone2 from "../assets/img/phone2.png";
+import heart2 from "../assets/img/heart2.png"
 
 export default function article() {
   return (
@@ -19,7 +19,7 @@ export default function article() {
           </span>
         </div>
         <img className="phone2" src={phone2} alt="phone2" />
-          <img className="heart2" src={heart2} alt="heart" />
+          <img className="heart2 mobile" src={heart2} alt="heart" />
       </article>
     </>
   );

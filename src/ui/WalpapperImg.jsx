@@ -1,5 +1,5 @@
 import React from "react";
-import LayerBottom from "../assets/img/LayerBottom.svg";
+import LayerBottom from "../assets/img/LayerBottom.png";
 
 export default function WalpapperBottom() {
   return (
