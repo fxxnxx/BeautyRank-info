@@ -25,3 +25,10 @@
 .partnerTable::-webkit-scrollbar-thumb:hover {
   background: #FF3E9B;
 }
+
+@media screen and (max-width: 640px) {
+  .partnerTable {
+    width: 402px;
+    height: 264px;
+  }
+}

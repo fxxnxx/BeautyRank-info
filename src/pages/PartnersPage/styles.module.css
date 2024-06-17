@@ -75,3 +75,47 @@
 .footerLogo {
   width: 20%;
 }
+
+.contactUsBtn {
+  display: none;
+}
+
+.contactUsBtn:hover {
+  opacity: 0.8;
+  z-index: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .leftBackgroundComet {
+    display: none;
+  }
+
+  .rightBackgroundComet {
+    display: none;
+  }
+  
+  .footerBackground {
+    height: 130px
+  }
+
+  .contactUsBtn {
+    width: 200px;
+    height: 50px;
+    background: no-repeat center center;
+    background-size: cover;
+    color: #ff3e9b;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 50px;
+    border: 1px solid;
+    z-index: 1;
+    display: initial;
+  }
+  
+  .footerLogo {
+    display: none;
+  }
+}
