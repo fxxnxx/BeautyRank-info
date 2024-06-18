@@ -1,3 +1,11 @@
+.homePc {
+    display: block;
+}
+
+.homeModile {
+    display: none;
+}
+
 .aboutPageWrapper {
     background-image: linear-gradient(#494949, #494949,  #0D0D0D);
     height: 2160px;
@@ -69,7 +77,7 @@
 .heartDouble {
     position: absolute;
     z-index: 5;
-    top: 580px;
+    top: 536px;
     left: 68%;
     transform: translateX(-50%);
     width: 389px;
@@ -106,8 +114,8 @@
 }
 
 .heartWrapper > img {
-    height: 500px;
-    height: 500px;
+    width: 389px;
+    height: 323px;
 }
 
 .heartWrapper  {
@@ -196,78 +204,108 @@
 }
 
 @media screen and (max-width: 640px) {
-    .leftBackgroundComet {
-      display: none;
-    }
-  
-    .rightBackgroundComet {
-      display: none;
+    .homePc {
+        display: none;
     }
     
-    .footerBackground {
-      height: 130px
-    }
-  
-    .contactUsBtn {
-      width: 200px;
-      height: 50px;
-      background: no-repeat center center;
-      background-size: cover;
-      color: #ff3e9b;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      text-transform: uppercase;
-      transition: background-color 0.3s, color 0.3s;
-      border-radius: 50px;
-      border: 1px solid;
-      z-index: 1;
-      display: initial;
+    .homeModile {
+        display: block;
     }
     
-    .footerLogo {
-      display: none;
-    }
-
     .aboutPageWrapper {
+        background-image: linear-gradient(#494949, #494949,  #0D0D0D);
+        height: auto;
+        position: absolute;
         width: 100%;
-        position: relative;
+        z-index: -2;
+    }
+    
+    .sideText, .phraseText {
+        font-size: 20px;
+        line-height: 20px;
+
     }
 
     .mainContent {
-        height: 273px;
-        margin-top: 114px;
-        gap: 174px;
+        gap: 0px;
+        justify-content: center;
+        height: 277px;
+        width: 100vw;
+    }
+
+    .switchBtn > img {
+        width: 60px;
+    }
+
+    .sideContent {
+        gap: 15px;
+        width: 165px;
     }
 
     .phoneWrapper > img {
         width: 233px;
-        height: 466px;
+        height: 460px;
+        margin: 0;
+        margin-right: 15px;
     }
 
-    .phoneWrapper {
-        position: relative;
-        top: -43px;
-        left: 196px;
+    .modalPhoneWrapper {
+        width: 233px;
+        height: 460px;
     }
 
-    .switchBtn {
-        width: 60px;
-    }
-
-    .sideText {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    .sideContent {
-        width: 165px;
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .heartWrapper > img {
         height: 190px;
         width: 165px;
-        top: 320px;
+        top: 340px;
         left: 78%;
+    }
+
+    .heartDouble > img {
+        height: 162px;
+        width: 165px;
+        top: 340px;
+        left: 78%;
+    }
+
+    .phraseBlock {
+        width: 420px;
+        height: 92px;
+        margin-top: 190px;
+    }
+
+    .phraseText {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .likeWrapper > img {
+        width: 320px;
+        height: 320px;
+        transform: scaleX(-1);
+    }
+
+    .summaryBlock {
+        background-image: url("../../assets/img/main_bottom.svg");
+        background-size: unset;
+        width: 100%;
+        height: 273px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        text-align: start;
+        padding: 30px 20px;
+        margin-bottom: 80px;
     }
 }

@@ -126,9 +126,9 @@ const AboutPage = () => {
                     />
                   ) : (
                     <img
-                    src={phoneAbout2}
-                    alt="Second Image"
-                    className="image aboutPhone"
+                      src={phoneAbout2}
+                      alt="Second Image"
+                      className="image aboutPhone"
                     />
                   )}
                 </div>
@@ -138,7 +138,7 @@ const AboutPage = () => {
                   </div>
                   <div>
                     <span className={styles.sideText}>
-                      Видео делает оценки судей максимально  
+                      Видео делает оценки судей максимально
                     </span>
                     <div className={styles.sideText} style={{ color: "#FF3E9B" }}>
                       объективными!
@@ -162,38 +162,19 @@ const AboutPage = () => {
               <div className={styles.likeWrapper}>
                 <img className="like" src={like} alt="like" />
               </div>
-              <div className={styles.summaryBlock} style={{ width: '926px', height: '400px', padding: '89px 30px', marginTop: 0 }}>
+              <div className={styles.summaryBlock}>
                 <div>
-                  <span className={styles.phraseText} style={{ fontSize: '32px' }}>Объективная оценка качества:</span>
+                  <span className={styles.phraseText} style={{ textAlign: 'start'}}>Объективная оценка качества:</span>
                 </div>
                 <div>
-                  <span className={styles.phraseText} style={{ fontSize: '32px',  color: "#FF3E9B" }}>BeautyRank </span>
-                  <span className={styles.phraseText} style={{ fontSize: '32px' }}> использует продвинутую систему судейства, основанную на объективных критериях и мнениях экспертов. Это гарантирует, что каждый специалист оценивается справедливо и честно.</span>
+                  <span className={styles.phraseText} style={{ color: "#FF3E9B", textAlign: 'start' }}>BeautyRank </span>
+                  <span className={styles.phraseText} style={{ textAlign: 'start'}}> использует продвинутую систему судейства, основанную на объективных критериях и мнениях экспертов. Это гарантирует, что каждый специалист оценивается справедливо и честно.</span>
                 </div>
               </div>
+              <Footer />
             </div>
           </div>
-          <img className={styles.leftBackgroundComet} src={BackAboutLeft} alt="img" />
-          <img className={styles.rightBackgroundComet} src={BackAboutRight} alt="img" />
-          <div className={styles.backgroundImgWrapper}>
-            <img
-              className={styles.backgroundImg}
-              src={Background}
-              alt="Background"
-              />
-          </div>
-          <div className={styles.footerBackgroundWrapper}>
-            <img
-              className={styles.footerBackground}
-              src={LayerBottom}
-              alt="Layer_bottom"
-              />
-          </div>
         </div>
-        <footer className={styles.partnersPageFooter}>
-          <img className={styles.footerLogo} src={FooterLogo} alt="" />
-          <button class={styles.contactUsBtn}>Связаться с нами</button>
-        </footer>
       </div>
     </>
   );
