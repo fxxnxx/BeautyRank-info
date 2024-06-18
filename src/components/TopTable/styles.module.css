@@ -1,6 +1,6 @@
 .topTable {
   width: 589px;
-  height: 590px;
+  height: calc(100vh - 330px);
   overflow-y: scroll;
   margin-left: 42px;
 }
